@@ -38,8 +38,8 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv1"
         android:layout_marginRight="35dp"
-        android:text="C -> F"
-        android:onClick="C2F"
+        android:text="C2F"
+        android:onClick="cTof"
 
         />
     <Button
@@ -49,8 +49,8 @@
         app:layout_constraintTop_toBottomOf="@id/btn1"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginRight="35dp"
-        android:text="F -> C"
-        android:onClick="F2C"
+        android:text="F2C"
+        android:onClick="fToc"
         />
 
     <TextView
