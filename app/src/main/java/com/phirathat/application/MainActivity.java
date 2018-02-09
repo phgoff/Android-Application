@@ -10,41 +10,39 @@ import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity {
-
     private TextView tv1;
-    private TextView tv2;
-    private EditText editName;
-    private Button btnDelete;
+    private TextView tvans;
+    private EditText edt1;
+    private EditText edt2;
+    private Button btn1;
+    private Button btn2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        editName = findViewById(R.id.editname);
-        tv1 = findViewById(R.id.tv1);
-        tv2 = findViewById(R.id.tv2);
-        btnDelete = findViewById(R.id.btnDelete);
-        btnDelete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                tv1.setText("");
-                tv2.setText("");
-            }
-        });
+        edt1 = findViewById(R.id.edt1);
+        edt2 = findViewById(R.id.edt2);
+        tvans = findViewById(R.id.tvans);
+        btn1 = findViewById(R.id.btn1);
+        btn2 = findViewById(R.id.btn2);
 
     }
 
-    public void submit(View view) {
-        tv1.setText(editName.getText());
-        tv2.setText("Added!");
+    public void cTof (View view) {
+        // tvans.setText(edt1.getText());
+        double c2f = ((Integer.parseInt(edt1.getText().toString()) *1.8)+32);
+        tvans.setText(""+c2f);
     }
 
-    public void restart(View view) {
-        Intent intent = getIntent();
-        finish();
-        startActivity(intent);
+    public void fToc (View view) {
+        // tvans.setText(edt2.getText());
+        double f2c = ((9/5)*(Integer.parseInt(edt2.getText().toString()))+32);
+        tvans.setText(""+f2c);
     }
 
 }
+
+
 
 
