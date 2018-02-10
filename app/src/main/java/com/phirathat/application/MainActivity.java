@@ -31,13 +31,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void cTof (View view) {
         // tvans.setText(edt1.getText());
-        double c2f = ((Integer.parseInt(edt1.getText().toString()) *1.8)+32);
+        double c2f = ((Double.parseDouble(edt1.getText()) *1.8)+32);
         tvans.setText(""+c2f);
     }
 
     public void fToc (View view) {
         // tvans.setText(edt2.getText());
-        double f2c = ((9/5)*(Integer.parseInt(edt2.getText().toString()))+32);
+        double f2c = (((9/5)*(Double.parseDouble(edt2.getText())))+32);
         tvans.setText(""+f2c);
     }
 
