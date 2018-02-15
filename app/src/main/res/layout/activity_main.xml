@@ -5,14 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.phirathat.application.MainActivity"
-    android:background="@drawable/bgvector2"
+    android:background="@drawable/bgvector"
     >
 
     <TextView
         android:id="@+id/tv1"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:background="@drawable/bgvector"
         android:fontFamily="sans-serif-smallcaps"
         android:gravity="center"
         android:text="Temperature Converter"
