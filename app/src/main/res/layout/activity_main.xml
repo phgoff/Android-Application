@@ -4,18 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.phirathat.application.MainActivity">
+    tools:context="com.phirathat.application.MainActivity"
+    android:background="@drawable/bgvector2"
+    >
 
     <TextView
         android:id="@+id/tv1"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:text="Temperature Converter"
-        android:textSize="30sp"
-        android:textColor="#F50"
-        android:background="#F157"
+        android:background="@drawable/bgvector"
+        android:fontFamily="sans-serif-smallcaps"
         android:gravity="center"
-        tools:ignore="HardcodedText" />
+        android:text="Temperature Converter"
+        android:textColor="#F70"
+        android:textSize="32sp"
+        tools:ignore="HardcodedText"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        />
 
     <EditText
         android:id="@+id/edt1"
@@ -61,14 +67,15 @@
         android:id="@+id/tvans"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:text="..."
+        android:fontFamily="casual"
+        android:text="Result"
+        android:textColor="#F20"
         android:textSize="30sp"
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="40dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-
         />
 
 
