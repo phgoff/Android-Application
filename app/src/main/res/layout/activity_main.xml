@@ -29,6 +29,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv1"
+        android:textColor="#FFF"
 
         />
     <EditText
@@ -37,7 +38,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edt1"
-
+        android:textColor="#FFF"
         />
     <Button
         android:id="@+id/btn1"
