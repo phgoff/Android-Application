@@ -3,10 +3,12 @@ package com.phirathat.application;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import java.text.DecimalFormat;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -16,6 +18,9 @@ public class MainActivity extends AppCompatActivity {
     private EditText edt2;
     private Button btn1;
     private Button btn2;
+    private double c_cal,f_cal;
+    private String errC,errF;
+    private static DecimalFormat dec2 = new DecimalFormat(".##");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,16 +35,31 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void cTof (View view) {
-        // tvans.setText(edt1.getText());
-        double c2f = ((Double.parseDouble(edt1.getText()) *1.8)+32);
-        tvans.setText(""+c2f);
+        errC = edt1.getText().toString ();
+        if (TextUtils.isEmpty (errC)) {
+            edt1.setError ("Please Enter Number");
+        }
+        else {
+            c_cal = Double.parseDouble(String.valueOf(edt1.getText()));
+            c_cal = (c_cal *(9.0/5.0))+32;
+            tvans.setText (dec2.format(c_cal)+"°F");
+
+    }
     }
 
     public void fToc (View view) {
-        // tvans.setText(edt2.getText());
-        double f2c = (((9/5)*(Double.parseDouble(edt2.getText())))+32);
-        tvans.setText(""+f2c);
+
+        errF = edt2.getText().toString ();
+        if (TextUtils.isEmpty (errF)) {
+            edt2.setError ("Please Enter Number");
+        }
+        else {
+            f_cal = Double.parseDouble(String.valueOf(edt2.getText()));
+            f_cal = (f_cal-32)*(5.0/9.0);
+            tvans.setText(dec2.format(f_cal) + "ฺ°C");
+        }
     }
+
 
 }
 
