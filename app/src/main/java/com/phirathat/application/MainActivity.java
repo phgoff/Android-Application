@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         }
         else {
             c_cal = Double.parseDouble(String.valueOf(edt1.getText()));
-            c_cal = (c_cal *(9.0/5.0))+32;
+            c_cal = (c_cal*1.8)+32;
             tvans.setText (dec2.format(c_cal)+"°F");
 
     }
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         }
         else {
             f_cal = Double.parseDouble(String.valueOf(edt2.getText()));
-            f_cal = (f_cal-32)*(5.0/9.0);
+            f_cal = (f_cal-32)/1.8;
             tvans.setText(dec2.format(f_cal) + "ฺ°C");
         }
     }
