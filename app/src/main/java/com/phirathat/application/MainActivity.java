@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
         else {
             f_cal = Double.parseDouble(String.valueOf(edt2.getText()));
             f_cal = (f_cal-32)/1.8;
-            tvans.setText(dec2.format(f_cal) + "ฺ°C");
+            tvans.setText(dec2.format(f_cal) + °C");
         }
     }
 
